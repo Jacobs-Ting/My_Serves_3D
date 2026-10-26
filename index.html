@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jacobs’ Cozy Little Academy · 小小諮詢教室</title>
+  <meta name="description" content="Jacobs 的專業諮詢與顧問服務：RF 技術諮詢、AI 輔助設計求職專案、跨領域轉職與社會新鮮人職涯諮詢。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="services.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <header class="site-header">
+    <a class="brand" data-target="overview" href="#overview" aria-label="返回小小教室總覽">
+      <div class="brand-mark"><span>J</span></div>
+      <div>Jacobs’ <b>Little Academy</b><small>小小教室，大大的可能。</small></div>
+    </a>
+    <nav class="header-nav">
+      <a class="nav-btn" data-target="overview" href="#overview">小教室總覽</a>
+      <a class="nav-btn primary" href="mailto:ppttding0205@gmail.com?subject=【預約諮詢】專業諮詢服務預約" data-booking>♧ 預約諮詢</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- View 0: 服務總覽 -->
+    <section class="view active" id="overview" aria-labelledby="overview-title">
+      <div class="academy-intro"><p class="eyebrow">JACOBS AI LAB / A LITTLE PLACE TO GROW</p>
+      <h1 id="overview-title">把下一步，<em>慢慢想清楚。</em></h1><p>歡迎來到 Jacobs 的小小諮詢教室。<br>一點專業、一杯咖啡，陪你找到自己的方向。</p></div>
+      <div class="academy-stage" id="academy-stage">
+        <div class="stage-caption"><span class="open-dot"></span> 小小教室・歡迎探索 <small>INTERACTIVE 3D ACADEMY</small></div>
+        <div id="scene" role="img" aria-label="可拖曳旋轉的 3D 小小補習班，服務也可從下方按鈕進入"></div>
+        <p id="scene-status" role="status">小教室準備中… 下方服務選單隨時可用。</p>
+        <div id="scene-tooltip" hidden></div>
+        <div class="scene-tools"><button id="reset-camera">↺ 返回總覽</button><button id="quality" aria-pressed="false">省電模式</button><button data-booking>♧ 預約鈴鐺</button><button id="greet-teacher">☺ 和老師打招呼</button></div>
+        <div class="scene-help">拖曳旋轉 · 滾輪縮放 · 點選教室探索 <span>手機：單指旋轉 / 雙指縮放</span></div>
+        <aside id="service-preview" hidden aria-label="教室介紹"><button id="close-preview" aria-label="關閉介紹">×</button><p class="eyebrow" id="preview-number"></p><h2 id="preview-title"></h2><p id="preview-desc"></p><p id="preview-price"></p><button class="cta-action-btn" id="preview-open">查看完整服務 →</button></aside>
+      </div>
+      <nav class="quick-services" aria-label="教室快速入口">
+        <button data-room="service-rf"><span>01 / ∿</span>RF 工程教室 <i>↗</i></button>
+        <button data-room="service-ai"><span>02 / ⌘</span>AI 作品集工作站 <i>↗</i></button>
+        <button data-room="service-transition"><span>03 / ☕</span>職涯相談室 <i>↗</i></button>
+        <button data-room="service-fresh"><span>04 / ✧</span>新鮮人教室 <i>↗</i></button>
+      </nav>
+      <div class="catalog-heading"><p class="eyebrow">FIND YOUR LITTLE CORNER</p><h2>每個階段，都有適合你的座位。</h2><p>也可以直接閱讀完整服務內容與收費。</p></div>
+      <div class="services-grid">
+        <!-- Card 1: RF技術諮詢服務 -->
+        <article class="service-card rf" tabindex="0" role="button" data-target="service-rf" aria-label="查看 RF技術諮詢服務 詳細介紹">
+          <div>
+            <div class="card-top"><span>01 · RF CONSULTING</span><i>→</i></div>
+            <div class="card-symbol">∿</div>
+            <div>
+              <small>HARDWARE & SYSTEM</small>
+              <h2>RF技術諮詢服務</h2>
+              <p>針對各類無線通訊硬體產品與通訊技術研發，提供深度技術評估、射頻除錯與量產避坑指導。</p>
+            </div>
+            <ul class="service-desc-list">
+              <li>系統架構評估與無線鏈路預算 (Link Budget) 計算</li>
+              <li>射頻電路、微波元件選型與阻抗匹配除錯指導</li>
+              <li>天線遠場輻射場型、方向性與增益優化建議</li>
+              <li>量產驗證導入評估與 EMI/EMC 對策諮詢</li>
+            </ul>
+          </div>
+          <div class="service-card-footer">
+            <span>查看詳細介紹（收費、服務方式、時間與大綱）</span>
+            <i>→</i>
+          </div>
+        </article>
+
+        <!-- Card 2: AI 輔助設計求職side project -->
+        <article class="service-card ai" tabindex="0" role="button" data-target="service-ai" aria-label="查看 AI 輔助設計求職side project 詳細介紹">
+          <div>
+            <div class="card-top"><span>02 · AI SIDE PROJECT</span><i>→</i></div>
+            <div class="card-symbol">⌬</div>
+            <div>
+              <small>PORTFOLIO & MENTORSHIP</small>
+              <h2>AI 輔助設計求職side project</h2>
+              <p>將你的專業知識與工程模擬創意轉化為高亮點、可落地且能產品化的 AI 求職代表作。</p>
+            </div>
+            <ul class="service-desc-list">
+              <li>發想並鎖定具求職競爭力之高含金量 AI 專案主題</li>
+              <li>AI 輔助工程模擬、資料處理與互動展示工具規劃</li>
+              <li>GitHub 作品集結構整理與 Web Demo 線上部署指導</li>
+              <li>履歷專案亮點量化與技術面試說服力包裝</li>
+            </ul>
+          </div>
+          <div class="service-card-footer">
+            <span>查看詳細介紹（收費、服務方式、時間與大綱）</span>
+            <i>→</i>
+          </div>
+        </article>
+
+        <!-- Card 3: 跨領域轉職職涯諮詢 -->
+        <article class="service-card senior" tabindex="0" role="button" data-target="service-transition" aria-label="查看 跨領域轉職職涯諮詢 詳細介紹">
+          <div>
+            <div class="card-top"><span>03 · CAREER TRANSITION</span><i>→</i></div>
+            <div class="card-symbol">⎇</div>
+            <div>
+              <small>CAREER COACHING & AUDIT</small>
+              <h2>跨領域轉職職涯諮詢</h2>
+              <p>專為工程師、技術主管或尋求跨界發展的職場人量身規劃，突破職涯瓶頸並開拓第二成長曲線。</p>
+            </div>
+            <ul class="service-desc-list">
+              <li>深度盤點 10+ 年技術與專案管理核心不可替代資產</li>
+              <li>第二職涯路徑評估（跨領域轉職、顧問、SaaS 探索）</li>
+              <li>資深工程履歷深度翻修，精煉商業價值與量化成果</li>
+              <li>高階職位面試提問應對與薪資談判策略指導</li>
+            </ul>
+          </div>
+          <div class="service-card-footer">
+            <span>查看詳細介紹（收費、服務方式、時間與大綱）</span>
+            <i>→</i>
+          </div>
+        </article>
+
+        <!-- Card 4: 社會新鮮人職涯諮詢(電子通訊類) -->
+        <article class="service-card fresh" tabindex="0" role="button" data-target="service-fresh" aria-label="查看 社會新鮮人職涯諮詢(電子通訊類) 詳細介紹">
+          <div>
+            <div class="card-top"><span>04 · FRESH GRADUATE</span><i>→</i></div>
+            <div class="card-symbol">✦</div>
+            <div>
+              <small>INDUSTRY INSIGHT & RESUME</small>
+              <h2>社會新鮮人職涯諮詢(電子通訊類)</h2>
+              <p>專為電子、電機、通訊相關科系畢業生打造，剖析業界真實生態，跨過求職盲區。</p>
+            </div>
+            <ul class="service-desc-list">
+              <li>電子通訊產業鏈（品牌廠、ODM/OEM、IC設計）生態解讀</li>
+              <li>個人技術優勢定位與合適職務精準匹配（RD、RF、TPM）</li>
+              <li>新鮮人履歷重構，提煉專題成果與實驗室亮點</li>
+              <li>技術面試常見情境演練與專業提問技巧指導</li>
+            </ul>
+          </div>
+          <div class="service-card-footer">
+            <span>查看詳細介紹（收費、服務方式、時間與大綱）</span>
+            <i>→</i>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Detail Subpage 1: RF技術諮詢服務 -->
+    <section class="view" id="service-rf" aria-labelledby="service-rf-title">
+      <div class="section-heading">
+        <button class="back-btn" type="button" data-target="overview">← 回到服務總覽</button>
+        <p class="eyebrow"><span></span> RF CONSULTING · 01</p>
+        <h1 id="service-rf-title">RF技術諮詢服務</h1>
+        <p>高階工程難題突破 · 系統架構優化 · 17 年射頻實務避坑指導</p>
+      </div>
+
+      <div class="service-detail-container">
+        <div class="detail-meta-bar">
+          <div class="meta-tag"><span>💰 收費標準</span><b class="price">NT$ 3,000 / 次（長期顧問另議）</b></div>
+          <div class="meta-tag"><span>💻 服務方式</span><b>線上 1 對 1（Google Meet · 支援 NDA）</b></div>
+          <div class="meta-tag"><span>⏱ 服務時間</span><b>60～90 分鐘 / 次（含事前技術資料審閱）</b></div>
+          <div class="meta-tag"><span>🔒 隱私保密</span><b>全程嚴格保密 · 可簽署雙方保密協議</b></div>
+        </div>
+
+        <div class="detail-block">
+          <div class="detail-block-title"><span>01</span><h3>適合對象與常見痛點</h3></div>
+          <div class="detail-cards-grid">
+            <div class="detail-info-card">
+              <h4>🎯 射頻效能瓶頸卡關</h4>
+              <p>遇到射頻雜訊底線過高、Link Budget 裕度不足、接收靈敏度未達標或輻射場型畸變的工程研發團隊。</p>
+            </div>
+            <div class="detail-info-card">
+              <h4>🎯 新硬體架構評估選型</h4>
+              <p>正在規劃新通訊產品、天線配置與射頻前端晶片組選型，需資深專家協助評估設計可行性與風險之負責人。</p>
+            </div>
+            <div class="detail-info-card">
+              <h4>🎯 量產與 EMI/EMC 認證卡關</h4>
+              <p>面臨試產良率不佳、量產測試盲點、各國法規射頻認證或電磁干擾問題，亟需系統化除錯方向之工程師。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-block">
+          <div class="detail-block-title"><span>02</span><h3>詳細諮詢大綱與解法模組</h3></div>
+          <div class="syllabus-list">
+            <div class="syllabus-item">
+              <div class="syllabus-num">M1</div>
+              <div class="syllabus-body">
+                <h4>資料預審與架構瓶頸定位</h4>
+                <p>事前檢視 Block Diagram、電路圖、S 參數、Layout 與測試報告，迅速縮小問題範圍並定位核心弱點。</p>
+              </div>
+            </div>
+            <div class="syllabus-item">
+              <div class="syllabus-num">M2</div>
+              <div class="syllabus-body">
+                <h4>電路除錯與阻抗匹配調校</h4>
+                <p>針對傳輸線損耗、射頻前端隔離度、天線匹配迴路與微波佈局提供具體除錯方向與計算依據。</p>
+              </div>
+            </div>
+            <div class="syllabus-item">
+              <div class="syllabus-num">M3</div>
+              <div class="syllabus-body">
+                <h4>系統級雜訊抑制與天線優化</h4>
+                <p>解析電源雜訊耦合、地迴路干擾以及天線在機構殼體內之遠場輻射特性與增益調校方案。</p>
+              </div>
+            </div>
+            <div class="syllabus-item">
+              <div class="syllabus-num">M4</div>
+              <div class="syllabus-body">
+                <h4>量產導入與驗證避坑清單</h4>
+                <p>分享 17 年量產實務經驗，提供產線校正盲點檢視、法規認證預審建議及備選元件策略。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-block">
+          <div class="detail-block-title"><span>03</span><h3>諮詢實體產出 (Deliverables)</h3></div>
+          <div class="deliverables-grid">
+            <div class="deliverable-item">
+              <div class="deliv-icon">📋</div>
+              <div>
+                <h4>《RF 技術診斷與具體優化 Checklist》</h4>
+                <p>針對您的專案量身整理之關鍵除錯步驟與優先改進建議清單。</p>
+              </div>
+            </div>
+            <div class="deliverable-item">
+              <div class="deliv-icon">💡</div>
+              <div>
+                <h4>《關鍵元件替代架構推薦方案》</h4>
+                <p>提供考量交期、成本與效能之射頻元件選型與備選線路建議。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-block">
+          <div class="detail-block-title"><span>04</span><h3>4 步驟預約諮詢流程</h3></div>
+          <div class="process-steps">
+            <div class="step-card"><span>Step 1</span><h4>來信預約</h4><p>點擊下方按鈕來信，簡述專案背景與欲解決之技術難題。</p></div>
+            <div class="step-card"><span>Step 2</span><h4>資料預審</h4><p>簽署 NDA（若需要），並提供去識別化技術資料供事前評估。</p></div>
+            <div class="step-card"><span>Step 3</span><h4>線上諮詢</h4><p>透過 Google Meet 進行 1 對 1 深度技術對談與設計推演。</p></div>
+            <div class="step-card"><span>Step 4</span><h4>產出報告</h4><p>會後發送專屬優化建議 Checklist，並提供會後答疑追蹤。</p></div>
+          </div>
+        </div>
+
+        <div class="detail-cta-box">
+          <div class="cta-content">
+            <h3>準備好突破當前的技術瓶頸了嗎？</h3>
+            <p>歡迎直接來信預約諮詢，我將於 24 小時內親自回覆並與您確認諮詢時間。</p>
+            <div class="cta-contact-info">
+              <span>聯絡信箱：<b>ppttding0205@gmail.com</b></span>
+              <button class="copy-email-btn" type="button" data-email="ppttding0205@gmail.com">複製信箱</button>
+            </div>
+          </div>
+          <a class="cta-action-btn" href="mailto:ppttding0205@gmail.com?subject=【預約諮詢】RF技術諮詢服務">
+            <span>✉</span> 立即來信預約諮詢
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detail Subpage 2: AI 輔助設計求職side project -->
+    <section class="view" id="service-ai" aria-labelledby="service-ai-title">
+      <div class="section-heading">
+        <button class="back-btn" type="button" data-target="overview">← 回到服務總覽</button>
+        <p class="eyebrow"><span></span> AI SIDE PROJECT · 02</p>
+        <h1 id="service-ai-title">AI 輔助設計求職side project</h1>
+        <p>打造具備求職說服力的高含金量個人專案 · 作品集從 0 到 1 實戰指導</p>
+      </div>
+
+      <div class="service-detail-container">
+        <div class="detail-meta-bar">
+          <div class="meta-tag"><span>💰 收費標準</span><b class="price">NT$ 2,500 / 次（另有 4 週深度陪跑方案）</b></div>
+          <div class="meta-tag"><span>💻 服務方式</span><b>線上 1 對 1 專案診斷與實戰輔導（Google Meet）</b></div>
+          <div class="meta-tag"><span>⏱ 服務時間</span><b>60 分鐘 / 次（課後附專屬開發 Roadmap）</b></div>
+          <div class="meta-tag"><span>🎯 適合基礎</span><b>具備任一工程、程式或專業背景者</b></div>
+        </div>
+
+        <div class="detail-block">
+          <div class="detail-block-title"><span>01</span><h3>適合對象與常見痛點</h3></div>
+          <div class="detail-cards-grid">
+            <div class="detail-info-card">
+              <h4>🎯 履歷缺乏吸睛亮點</h4>
+              <p>投遞職缺頻繁已讀不回，履歷中缺少能夠直接證明現代 AI 技術整合能力的代表性個人作品。</p>
+            </div>
+            <div class="detail-info-card">
+              <h4>🎯 概念不知如何落地</h4>
+              <p>有自動化、資料處理或工程模擬的想法，但不知如何整合現代 AI API 與打造網頁 Demo 原型。</p>
+            </div>
+            <div class="detail-info-card">
+              <h4>🎯 GitHub 與作品集雜亂</h4>
+              <p>專案缺少結構化 README、系統架構圖與可隨點隨測的線上部署展示，無法在面試前留下深刻印象。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-block">
+          <div class="detail-block-title"><span>02</span><h3>詳細諮詢大綱與解法模組</h3></div>
+          <div class="syllabus-list">
+            <div class="syllabus-item">
+              <div class="syllabus-num">M1</div>
+              <div class="syllabus-body">
+                <h4>題材發想與痛點錨定</h4>
+                <p>拒絕常見的套版聊天機器人，結合你的本業專長提煉高門檻、有實務價值的 AI 應用主題。</p>
+              </div>
+            </div>
+            <div class="syllabus-item">
+              <div class="syllabus-num">M2</div>
+              <div class="syllabus-body">
+                <h4>AI 工具流與架構規劃</h4>
+                <p>利用現代 AI API、網頁框架與可視化工具快速跑出最小可行產品 (MVP)，降低開發門檻。</p>
+              </div>
+            </div>
+            <div class="syllabus-item">
+              <div class="syllabus-num">M3</div>
+              <div class="syllabus-body">
+                <h4>GitHub 作品集與線上展示</h4>
+                <p>專業 README 排版結構規範、架構圖繪製與 Web Demo 免費雲端部署實戰教學。</p>
+              </div>
+            </div>
+            <div class="syllabus-item">
+              <div class="syllabus-num">M4</div>
+              <div class="syllabus-body">
+                <h4>專案價值故事化包裝</h4>
+                <p>運用 STAR 原則提煉專案技術難題與解決過程，轉化為履歷關鍵字與面試必考亮點。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-block">
+          <div class="detail-block-title"><span>03</span><h3>諮詢實體產出 (Deliverables)</h3></div>
+          <div class="deliverables-grid">
+            <div class="deliverable-item">
+              <div class="deliv-icon">🗺</div>
+              <div>
+                <h4>《專屬 Side Project 開發路線圖》</h4>
+                <p>包含功能範疇切分、技術選型建議與階段性里程碑時程規劃。</p>
+              </div>
+            </div>
+            <div class="deliverable-item">
+              <div class="deliv-icon">📝</div>
+              <div>
+                <h4>《GitHub 專案範本與履歷量化指引》</h4>
+                <p>提供專業 README 模板、架構設計參考與履歷亮點描述修訂建議。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-block">
+          <div class="detail-block-title"><span>04</span><h3>4 步驟預約諮詢流程</h3></div>
+          <div class="process-steps">
+            <div class="step-card"><span>Step 1</span><h4>來信預約</h4><p>來信說明你的專業背景、目標求職方向與目前的專案想法。</p></div>
+            <div class="step-card"><span>Step 2</span><h4>需求對焦</h4><p>事前確認你想打造的專案規模，並提供前置思考問卷。</p></div>
+            <div class="step-card"><span>Step 3</span><h4>1 對 1 諮詢</h4><p>線上梳理架構，手把手定案主題、技術堆疊與實作路徑。</p></div>
+            <div class="step-card"><span>Step 4</span><h4>課後指引</h4><p>寄送專屬 Roadmap 與範本文件，並提供後續實作答疑。</p></div>
+          </div>
+        </div>
+
+        <div class="detail-cta-box">
+          <div class="cta-content">
+            <h3>打造讓你脫穎而出的 AI 作品集！</h3>
+            <p>歡迎直接來信預約諮詢，我將於 24 小時內親自回覆並與您確認諮詢時間。</p>
+            <div class="cta-contact-info">
+              <span>聯絡信箱：<b>ppttding0205@gmail.com</b></span>
+              <button class="copy-email-btn" type="button" data-email="ppttding0205@gmail.com">複製信箱</button>
+            </div>
+          </div>
+          <a class="cta-action-btn" href="mailto:ppttding0205@gmail.com?subject=【預約諮詢】AI 輔助設計求職side project">
+            <span>✉</span> 立即來信預約諮詢
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detail Subpage 3: 跨領域轉職職涯諮詢 -->
+    <section class="view" id="service-transition" aria-labelledby="service-transition-title">
+      <div class="section-heading">
+        <button class="back-btn" type="button" data-target="overview">← 回到服務總覽</button>
+        <p class="eyebrow"><span></span> CAREER TRANSITION · 03</p>
+        <h1 id="service-transition-title">跨領域轉職職涯諮詢</h1>
+        <p>資深職場人核心能力降維重組 · 開拓第二成長曲線與跨界價值</p>
+      </div>
+
+      <div class="service-detail-container">
+        <div class="detail-meta-bar">
+          <div class="meta-tag"><span>💰 收費標準</span><b class="price">NT$ 2,800 / 次（含課後量化報告）</b></div>
+          <div class="meta-tag"><span>💻 服務方式</span><b>線上 1 對 1 私密深度對談（Google Meet）</b></div>
+          <div class="meta-tag"><span>⏱ 服務時間</span><b>75 分鐘 / 次（深度梳理 10+ 年職涯資產）</b></div>
+          <div class="meta-tag"><span>🎯 適合對象</span><b>工程師、技術主管或 35+ 尋求突破者</b></div>
+        </div>
+
+        <div class="detail-block">
+          <div class="detail-block-title"><span>01</span><h3>適合對象與常見痛點</h3></div>
+          <div class="detail-cards-grid">
+            <div class="detail-info-card">
+              <h4>🎯 面臨職涯天花板與焦慮</h4>
+              <p>工作 8～15+ 年，感覺技術升遷受限、熱情消退，渴望開拓全新戰場卻不知從何切入。</p>
+            </div>
+            <div class="detail-info-card">
+              <h4>🎯 想跨領域卻缺乏清晰定位</h4>
+              <p>想從純硬體 RD 跨足 TPM、產品管理、業務顧問或跨領域整合，擔心年資與技能脫鉤。</p>
+            </div>
+            <div class="detail-info-card">
+              <h4>🎯 思考第二成長曲線</h4>
+              <p>評估技術顧問、個人品牌、SaaS 產品化或複合型職涯，亟需具備成功經驗者的實務引路。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-block">
+          <div class="detail-block-title"><span>02</span><h3>詳細諮詢大綱與解法模組</h3></div>
+          <div class="syllabus-list">
+            <div class="syllabus-item">
+              <div class="syllabus-num">M1</div>
+              <div class="syllabus-body">
+                <h4>職涯資產深度盤點 (Career Audit)</h4>
+                <p>跳脫單一職稱與領域限制，深度挖掘你 10+ 年底層核心能力，重構不可替代的複合價值。</p>
+              </div>
+            </div>
+            <div class="syllabus-item">
+              <div class="syllabus-num">M2</div>
+              <div class="syllabus-body">
+                <h4>第二曲線與轉職路徑評估</h4>
+                <p>以小步快跑策略評估內部轉型、跨界轉職或技術顧問可行性，大幅降低試錯成本與風險。</p>
+              </div>
+            </div>
+            <div class="syllabus-item">
+              <div class="syllabus-num">M3</div>
+              <div class="syllabus-body">
+                <h4>資深工程履歷商業化翻修</h4>
+                <p>去除技術流水帳與瑣碎細節，全面改以「商業影響力」、「專案領導」與「跨界整合」為主軸。</p>
+              </div>
+            </div>
+            <div class="syllabus-item">
+              <div class="syllabus-num">M4</div>
+              <div class="syllabus-body">
+                <h4>高階面試與薪資談判博弈</h4>
+                <p>展現「高階技術管理者格局」而非「年資包袱」，傳授應對獵頭與高階決策者的溝通談判心法。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-block">
+          <div class="detail-block-title"><span>03</span><h3>諮詢實體產出 (Deliverables)</h3></div>
+          <div class="deliverables-grid">
+            <div class="deliverable-item">
+              <div class="deliv-icon">📊</div>
+              <div>
+                <h4>《個人核心優勢盤點與轉職策略圖》</h4>
+                <p>梳理你的通用能力底牌，並提供適合切入之高價值職缺方向分析。</p>
+              </div>
+            </div>
+            <div class="deliverable-item">
+              <div class="deliv-icon">📄</div>
+              <div>
+                <h4>《資深履歷精修建議與行動清單》</h4>
+                <p>針對履歷亮點、商業影響力量化描述與後續行動步驟提供客製建議。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-block">
+          <div class="detail-block-title"><span>04</span><h3>4 步驟預約諮詢流程</h3></div>
+          <div class="process-steps">
+            <div class="step-card"><span>Step 1</span><h4>來信預約</h4><p>來信說明目前的職涯現況、年資與希望突破的轉職瓶頸。</p></div>
+            <div class="step-card"><span>Step 2</span><h4>事前履歷閱覽</h4><p>寄送現有履歷與背景資料，諮詢前由顧問先行深度研讀。</p></div>
+            <div class="step-card"><span>Step 3</span><h4>1 對 1 深度對談</h4><p>75 分鐘 Google Meet 私密諮詢，全面拆解困局並制定策略。</p></div>
+            <div class="step-card"><span>Step 4</span><h4>課後報告與答疑</h4><p>提供專屬優化建議行動指南，並享有 2 週內來信答疑追蹤。</p></div>
+          </div>
+        </div>
+
+        <div class="detail-cta-box">
+          <div class="cta-content">
+            <h3>開啟你的第二職涯黃金曲線！</h3>
+            <p>歡迎直接來信預約諮詢，我將於 24 小時內親自回覆並與您確認諮詢時間。</p>
+            <div class="cta-contact-info">
+              <span>聯絡信箱：<b>ppttding0205@gmail.com</b></span>
+              <button class="copy-email-btn" type="button" data-email="ppttding0205@gmail.com">複製信箱</button>
+            </div>
+          </div>
+          <a class="cta-action-btn" href="mailto:ppttding0205@gmail.com?subject=【預約諮詢】跨領域轉職職涯諮詢">
+            <span>✉</span> 立即來信預約諮詢
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Detail Subpage 4: 社會新鮮人職涯諮詢(電子通訊類) -->
+    <section class="view" id="service-fresh" aria-labelledby="service-fresh-title">
+      <div class="section-heading">
+        <button class="back-btn" type="button" data-target="overview">← 回到服務總覽</button>
+        <p class="eyebrow"><span></span> FRESH GRADUATE · 04</p>
+        <h1 id="service-fresh-title">社會新鮮人職涯諮詢(電子通訊類)</h1>
+        <p>電子通訊產業地圖深度解碼 · 技術履歷診斷 · 面試實戰精準起飛</p>
+      </div>
+
+      <div class="service-detail-container">
+        <div class="detail-meta-bar">
+          <div class="meta-tag"><span>💰 收費標準</span><b class="price">NT$ 1,200 / 次（新鮮人專屬優惠方案）</b></div>
+          <div class="meta-tag"><span>💻 服務方式</span><b>線上 1 對 1 諮詢與履歷健檢（Google Meet）</b></div>
+          <div class="meta-tag"><span>⏱ 服務時間</span><b>60 分鐘 / 次（含技術面試實戰模擬）</b></div>
+          <div class="meta-tag"><span>🎯 適合對象</span><b>電子、電機、通訊、資工應屆或 1~2 年新人</b></div>
+        </div>
+
+        <div class="detail-block">
+          <div class="detail-block-title"><span>01</span><h3>適合對象與常見痛點</h3></div>
+          <div class="detail-cards-grid">
+            <div class="detail-info-card">
+              <h4>🎯 對業界分工感到迷惘</h4>
+              <p>IC 設計廠、品牌系統廠、ODM/OEM 代工廠與模組廠到底差別在哪？第一份工作該如何選擇？</p>
+            </div>
+            <div class="detail-info-card">
+              <h4>🎯 學校專題不會寫進履歷</h4>
+              <p>只有學校實驗室或專題經歷，不知道如何轉譯成工業界主管在意的實用技能關鍵字。</p>
+            </div>
+            <div class="detail-info-card">
+              <h4>🎯 技術面試缺乏自信</h4>
+              <p>不知道技術主管通常怎麼考、面試尾聲該如何提問才能給面試官留下成熟專業的好印象。</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-block">
+          <div class="detail-block-title"><span>02</span><h3>詳細諮詢大綱與解法模組</h3></div>
+          <div class="syllabus-list">
+            <div class="syllabus-item">
+              <div class="syllabus-num">M1</div>
+              <div class="syllabus-body">
+                <h4>電子通訊產業鏈生態全景解讀</h4>
+                <p>深入剖析硬體 RD、RF 工程師、系統工程師、TPM、FAE 的真實日常、薪資結構與未來發展路徑。</p>
+              </div>
+            </div>
+            <div class="syllabus-item">
+              <div class="syllabus-num">M2</div>
+              <div class="syllabus-body">
+                <h4>技術優勢定位與職務匹配</h4>
+                <p>根據你的在校修課、專題方向與個人特質，精準定位適合投遞的高勝率職缺與職位類型。</p>
+              </div>
+            </div>
+            <div class="syllabus-item">
+              <div class="syllabus-num">M3</div>
+              <div class="syllabus-body">
+                <h4>新鮮人履歷重構與亮點提煉</h4>
+                <p>逐行診斷你的履歷，把學術論文與專題成果轉化為企業 HR 與用人主管一眼看中的「即戰力關鍵字」。</p>
+              </div>
+            </div>
+            <div class="syllabus-item">
+              <div class="syllabus-num">M4</div>
+              <div class="syllabus-body">
+                <h4>技術面試實戰模擬與反向提問</h4>
+                <p>拆解常見技術問題核心考點，傳授高情商自我介紹架構與面試尾聲「高分逆轉提問法」。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-block">
+          <div class="detail-block-title"><span>03</span><h3>諮詢實體產出 (Deliverables)</h3></div>
+          <div class="deliverables-grid">
+            <div class="deliverable-item">
+              <div class="deliv-icon">✍</div>
+              <div>
+                <h4>《履歷逐行精修建議反饋版》</h4>
+                <p>針對用詞、專案描述與排版結構進行精確修正，大幅提升面試邀約率。</p>
+              </div>
+            </div>
+            <div class="deliverable-item">
+              <div class="deliv-icon">🎯</div>
+              <div>
+                <h4>《新鮮人技術面試應對 Checklist》</h4>
+                <p>必備技術題答題框架、非技術情境題應對邏輯與高分提問範本。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="detail-block">
+          <div class="detail-block-title"><span>04</span><h3>4 步驟預約諮詢流程</h3></div>
+          <div class="process-steps">
+            <div class="step-card"><span>Step 1</span><h4>來信預約</h4><p>來信說明你的科系背景、畢業時間與想尋求的諮詢方向。</p></div>
+            <div class="step-card"><span>Step 2</span><h4>提供現有履歷</h4><p>寄送你目前的履歷初稿或專題摘要，供事前預審標註。</p></div>
+            <div class="step-card"><span>Step 3</span><h4>60 分鐘線上對談</h4><p>Google Meet 1 對 1 諮詢，即時履歷健檢與面試模擬。</p></div>
+            <div class="step-card"><span>Step 4</span><h4>課後收穫清單</h4><p>發送履歷修改精確建議與面試應考清單，為求職做好萬全準備。</p></div>
+          </div>
+        </div>
+
+        <div class="detail-cta-box">
+          <div class="cta-content">
+            <h3>跨出成功求職的第一步！</h3>
+            <p>歡迎直接來信預約諮詢，我將於 24 小時內親自回覆並與您確認諮詢時間。</p>
+            <div class="cta-contact-info">
+              <span>新鮮人專屬信箱：<b>ppttding0205@gmail.com</b></span>
+              <button class="copy-email-btn" type="button" data-email="ppttding0205@gmail.com">複製信箱</button>
+            </div>
+          </div>
+          <a class="cta-action-btn" href="mailto:ppttding0205@gmail.com?subject=【預約諮詢】社會新鮮人職涯諮詢(電子通訊類)">
+            <span>✉</span> 立即來信預約諮詢
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 JACOBS AI LAB · ALL RIGHTS RESERVED</span>
+    <a href="#overview" data-target="overview">回到小小教室 ↑</a>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <span>✦</span>
+    <div>
+      <b id="toast-title">提示訊息</b>
+      <small id="toast-desc">說明內容</small>
+    </div>
+  </div>
+
+  <dialog id="booking-dialog" aria-labelledby="booking-title"><button id="close-booking" aria-label="關閉預約視窗">×</button><p class="eyebrow">A LITTLE NEXT STEP</p><h2 id="booking-title">叮～歡迎預約諮詢！</h2><p>選擇一項服務，透過電子郵件告訴我你的需求。<br>寄出郵件後，再由 Jacobs 與你確認時間。</p><div id="booking-options"></div><p class="booking-note">此操作會開啟你的郵件軟體，尚未完成預約。</p></dialog>
+  <script src="services.js"></script>
+  <script src="js/academy-scene.bundle.js"></script>
+</body>
+</html>
